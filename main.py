@@ -148,13 +148,13 @@ tilemap[playerInfo[0]][playerInfo[1]] = playerInfo[2]
 tilemap[tigerInfo[0]][tigerInfo[1]] = tigerInfo[2]
 tilemap[axeInfo[0]][axeInfo[1]] = axeInfo[2]
 
-# Инициализируем дисплей
+# Инициализируем дисплей и карту
 pygame.init()
 DISPLAYSURF = pygame.display.set_mode((MAPWIDTH * (TILESIZE + 1), MAPHEIGHT * (TILESIZE + 1)))
-
 drawMap()
 pygame.display.update()
 
+# Сессия игры
 while isGameNotOver(tigerInfo, playerInfo):
     for event in pygame.event.get():
         if event.type == QUIT:
